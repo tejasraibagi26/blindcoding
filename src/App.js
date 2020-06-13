@@ -25,15 +25,13 @@ function App() {
     });
   })
 
-
-
   $(document).ready(function () {
     $('#nav-disable').bind("contextmenu", function (e) {
       e.preventDefault();
     });
   });
 
-  var ar = new Array(37, 38, 39, 40);
+  var ar = new Array(37, 38, 39, 40,116,118,120,123);
   $(document).keydown(function (e) {
     var key = e.which;
     if ($.inArray(key, ar) > -1 && e.shiftKey) {
@@ -44,6 +42,17 @@ function App() {
     }
     return true;
   });
+
+  $(document).keydown(function (e) {
+    var key = e.which;
+    if(key === 123){
+      e.preventDefault();
+      var alertmsg = document.getElementById('alert-msg');
+      alertmsg.innerHTML = "Function Disabled";
+    }
+  })
+
+
 
   return (
     <Main />
