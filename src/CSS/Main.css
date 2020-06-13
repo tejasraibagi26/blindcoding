@@ -61,9 +61,6 @@ body{
     border: transparent;
 }
 
-.answer-holder:hover{
-    pointer-events: none;
-}
 
 .btn{
     /* margin: 20px 15px; */

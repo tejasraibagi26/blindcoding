@@ -34,10 +34,11 @@ function TextContainer() {
             var string2 = $('#textarea').val();
             var strSplit = string1.split(" ");
             var strSplit2 = string2.split(" ");
-            console.log(strSplit.length, strSplit2.length);
+            console.log(strSplit, strSplit2);
             if (string2 !== "") {
-                for (var i = 0; i <= strSplit.length - 1; i++) {
+                for (var i = 0; i <= strSplit.length - 1 ; i++) {
                     var result = strSplit[i].localeCompare(strSplit2[i]);
+                    console.log(i);
                     console.log(result);
                     if (result !== null) {
                         if (result === -1) {
@@ -56,8 +57,11 @@ function TextContainer() {
                     else {
                         var alertmsg = document.getElementById('alert-msg');
                         alertmsg.innerHTML = "Enter string please";
-                    }
+                    } 
                 }
+                 var totalLetters = strSplit.length;
+                    var percentage = ((totalLetters - mistakeCounter) / 100 ) * 100;
+                    console.log(percentage);
             }
         })
     });
