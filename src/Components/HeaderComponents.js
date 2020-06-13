@@ -1,11 +1,10 @@
 import React from 'react';
 import { Navbar, NavbarBrand } from 'react-bootstrap';
-import $ from 'jquery';
 
 function Header() {
 
     return (
-        <div>
+        <div className = "container2">
             <Navbar id="nav-disable" expand="lg">
                 <NavbarBrand className="nav-title">Blind Typing</NavbarBrand>
             </Navbar>

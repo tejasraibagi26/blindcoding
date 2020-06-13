@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './HeaderComponents';
 import TextContainer from './TextFieldComponent';
-// import Details from './Details';
+import FooterComp from './FooterComponent';
 
 class Main extends React.Component {
 
@@ -10,6 +10,7 @@ class Main extends React.Component {
             <main>
                 <Header />
                 <TextContainer />
+                <FooterComp />
             </main>
         );
     }

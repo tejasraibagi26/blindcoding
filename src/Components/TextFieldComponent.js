@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import $ from 'jquery';
 
 function TextContainer() {
