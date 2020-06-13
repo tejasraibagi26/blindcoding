@@ -28,7 +28,9 @@ body{
     height: 90% !important;
     border: transparent !important;
     padding: 10px 10px;
+    box-shadow: 0px 2px 20px grey;
 }
+
 
 .text{
     color: black !important;
@@ -70,6 +72,13 @@ body{
 .btn-primary:hover , .btn:hover{
     background-color: white !important;
     color: turquoise !important;
+}
+
+.alerts{
+    color: red !important;
+    background-color: transparent !important;
+    font-size: 15px;
+    
 }
 
 

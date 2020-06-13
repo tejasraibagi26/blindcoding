@@ -4,13 +4,6 @@ import $ from 'jquery';
 
 function Header() {
 
-    $(document).ready(function () {
-        $('#nav-disable').bind("contextmenu", function (e) {
-            e.preventDefault();
-        });
-    });
-
-
     return (
         <div>
             <Navbar id="nav-disable" expand="lg">

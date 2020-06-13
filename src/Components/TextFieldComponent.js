@@ -5,21 +5,44 @@ import $ from 'jquery';
 function TextContainer() {
 
     $(document).ready(function () {
-        $('#textarea').bind("cut copy paste", function (e) {
-            e.preventDefault();
-            alert("You cannot cut/copy/paste into this text field.");
-            $('#textarea').bind("contextmenu", function (e) {
-                e.preventDefault();
-            });
-        });
+        // $('#textarea').bind("cut copy paste", function (e) {
+        //     e.preventDefault();
+        //     var alertmsg = document.getElementById('alert-msg');
+        //     alertmsg.innerHTML = "You cannot cut/copy/paste into this text field."
+        //     // alert("You cannot cut/copy/paste into this text field.");
+        //     $('#textarea').bind("contextmenu", function (e) {
+        //         e.preventDefault();
+        //         var alertmsg = document.getElementById('alert-msg');
+        //         alertmsg.innerHTML = "Right Click disabled."
+        //     });
+        // });
         $('#code-template').bind("contextmenu", function (e) {
             e.preventDefault();
+            var alertmsg = document.getElementById('alert-msg');
+            alertmsg.innerHTML = "Right Click disabled."
         });
+        // var el = document.getElementById('textarea');
+        // el.addEventListener('keydown', function (event) {
+        //     const key = event.key;
+        //     if (key === "Backspace" || key === "Delete") {
+        //         event.preventDefault();
+        //         var alertmsg = document.getElementById('alert-msg');
+        //         alertmsg.innerHTML = "You cannot delete!."
+        //         // alert('You cannot delete!');
+        //     }
+        // });
+        document.body.addEventListener('keydown', event => {
+            if (event.ctrlKey && 'cvxspwuazA'.indexOf(event.key) !== -1) {
+              event.preventDefault();
+              var alertmsg = document.getElementById('alert-msg');
+              alertmsg.innerHTML = "Function Disabled";
+            }
+          })
     });
 
     return (
         <div id="code-template">
-            <div className="row row-md-5 justify-content-center">
+            <div className="row row-4 justify-content-center">
                 <div className="container">
                     <div className="header">
                         <h2 className="text-head"> Paragraph to copy </h2>
@@ -30,12 +53,13 @@ function TextContainer() {
                     <div className="header">
                         <h2 className="text-head"> Write here (Hidden) </h2>
                         <Form>
-                            <textarea id="textarea" className="answer-holder" rows='12' cols='33' onpaste="return false;" placeholder="Answer"></textarea>
+                            <textarea onFocus="null" id="textarea" className="answer-holder" rows='12' cols='33' onpaste="return false;" placeholder="Answer"></textarea>
                         </Form>
                     </div>
                 </div>
             </div>
             <div className="row justify-content-center">
+                <h4 id="alert-msg" className="row justify-content-center alerts"></h4>
                 <Button>SUBMIT</Button>
             </div>
         </div>
