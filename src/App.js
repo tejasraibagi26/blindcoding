@@ -7,16 +7,24 @@ import './CSS/Main.css'
 
 function App() {
 
-  $(window).on('resize', function () {
-    var $containerHeight = $(window).height();
-    var $containerWidth = $(window).width();
+  $(document).ready(function() {
+    var isMobile = !!navigator.userAgent.match(/iPhone/i) || !!navigator.userAgent.match(/Android/i) || false;
+    console.log(isMobile);
 
-    if ($containerHeight <= 1200 || $containerWidth <= 1500) {
-      alert('Do not move away from the website');
-      var alertmsg = document.getElementById('alert-msg');
-      alertmsg.innerHTML = "Do not move away from the website";
-    }
-  });
+    $(window).on('resize', function () {
+      var $containerHeight = $(window).height();
+      var $containerWidth = $(window).width();
+  
+      if(!isMobile){
+        if ($containerHeight <= 1200 || $containerWidth <= 1500) {
+          alert('Do not move away from the website');
+          var alertmsg = document.getElementById('alert-msg');
+          alertmsg.innerHTML = "Do not move away from the website";
+        }
+      }
+    });
+  })
+
 
 
   $(document).ready(function () {
