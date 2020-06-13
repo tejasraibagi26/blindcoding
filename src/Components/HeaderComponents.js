@@ -7,7 +7,7 @@ function Header() {
     return (
         <div>
             <Navbar id="nav-disable" expand="lg">
-                <NavbarBrand className="nav-title">Blind Code</NavbarBrand>
+                <NavbarBrand className="nav-title">Blind Typing</NavbarBrand>
             </Navbar>
         </div>
     );
