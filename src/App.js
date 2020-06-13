@@ -13,6 +13,8 @@ function App() {
 
     if ($containerHeight <= 1200 || $containerWidth <= 1500) {
       alert('Do not move away from the website');
+      var alertmsg = document.getElementById('alert-msg');
+      alertmsg.innerHTML = "Do not move away from the website";
     }
   });
 

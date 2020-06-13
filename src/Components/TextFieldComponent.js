@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 import $ from 'jquery';
 
 function TextContainer() {
@@ -34,7 +34,7 @@ function TextContainer() {
             var string2 = $('#textarea').val();
             var strSplit = string1.split(" ");
             var strSplit2 = string2.split(" ");
-            console.log(strSplit.length,strSplit2.length);
+            console.log(strSplit.length, strSplit2.length);
             if (string2 !== "") {
                 for (var i = 0; i <= strSplit.length - 1; i++) {
                     var result = strSplit[i].localeCompare(strSplit2[i]);
@@ -64,20 +64,25 @@ function TextContainer() {
 
     return (
         <div id="code-template">
-            <div className="row row-4 justify-content-center">
-                <div className="container">
-                    <div className="header">
-                        <h2 className="text-head"> Paragraph to copy </h2>
-                        <p name="quest" className="text" id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <Row className="justify-content-md-center">
+                <Col sm={5}>
+                    <div className="container">
+                        <div className="header">
+                            <h2 className="text-head"> Paragraph to copy </h2>
+                            <p name="quest" className="text" id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
                     </div>
-                </div>
-                <div className="container">
-                    <div className="header">
-                        <h2 className="text-head"> Write here (Hidden) </h2>
-                        <textarea name="answer" id="textarea" className="answer-holder" rows='12' cols='33' placeholder="Answer"></textarea>
+                </Col>
+                <Col md={5}>
+                    <div className="container">
+                        <div className="header">
+                            <h2 className="text-head"> Write here (Hidden) </h2>
+                            <textarea name="answer" id="textarea" className="answer-holder" rows='13' cols='33' placeholder="Answer"></textarea>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </Col>
+
+            </Row>
             <div className="row justify-content-center">
                 <h4 id="alert-msg" className="row justify-content-center alerts"></h4>
                 <Button id="button">SUBMIT</Button>
