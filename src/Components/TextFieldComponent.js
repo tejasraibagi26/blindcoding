@@ -23,6 +23,7 @@ function TextContainer() {
         document.body.addEventListener('keydown', event => {
             if (event.ctrlKey && 'cvxspwuazA'.indexOf(event.key) !== -1) {
                 event.preventDefault();
+                var alertmsg = document.getElementById('alert-msg');
                 alertmsg.innerHTML = "Function Disabled";
             }
         })
