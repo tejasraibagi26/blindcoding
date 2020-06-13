@@ -60,10 +60,19 @@ function TextContainer() {
             </div>
             <div className="row justify-content-center">
                 <h4 id="alert-msg" className="row justify-content-center alerts"></h4>
-                <Button>SUBMIT</Button>
+                <Button onClick = {compare()}>SUBMIT</Button>
             </div>
         </div>
     );
+
+    function compare(){
+        // var string1 = 'ABC';
+        // var string2 = document.getElementById('textarea').innerHTML;
+        // var result = string1.localeCompare(string2);
+        // if(result != null){
+        //     return true;
+        // }
+    }
 }
 
 export default TextContainer;
