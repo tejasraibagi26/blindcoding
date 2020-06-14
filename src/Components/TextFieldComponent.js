@@ -12,6 +12,8 @@ function TextContainer() {
         }
         if (localStorage.getItem('isAttemptDone')) {
             window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
+            // window.location.replace("http://localhost:3000/blindcode/no_attempts");
+
         }
         else {
             localStorage.setItem('isAttemptDone', 'true');
@@ -28,7 +30,9 @@ function TextContainer() {
             console.log(errorCount);
             if (errorCount === 3) {
                 console.log("Function called");
-                window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
+                window.location.replace("https://tejasraibagi26.github.io/blindcode/exit")
+                // window.location.replace("http://localhost:3000/blindcode/exit");
+                ;
             }
         });
         var el = document.getElementById('textarea');
@@ -51,6 +55,8 @@ function TextContainer() {
                 if (errorCount === 3) {
                     console.log("Function called");
                     window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
+                    // window.location.replace("http://localhost:3000/blindcode/exit");
+
                 }
             }
         })
