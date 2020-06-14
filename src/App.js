@@ -63,11 +63,11 @@ function App() {
 
 
   return (
-    <Router>
+    <HashRouter>
       <Switch>
         <Route exact path="/blindcode" component={Main} />
       </Switch>
-    </Router>
+    </HashRouter>
   );
 
 
