@@ -67,9 +67,9 @@ function TextContainer() {
             }
         })
 
-        if(attemptLeft == 0){
-            window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
-        }
+        // if(attemptLeft == 0){
+        //     window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
+        // }
 
         $('#button').click(function () {
             var mistakeCounter = 0;
