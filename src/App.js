@@ -65,7 +65,8 @@ function App() {
   return (
     <HashRouter>
       <Switch>
-        <Route exact path="/blindcode" component={Main} />
+        <Route exact path="#/blindcode" component={Main} />
+        <Route exact path = "#/blindcode/exit" component = {ExitPage} />
       </Switch>
     </HashRouter>
   );
