@@ -16,7 +16,7 @@ function TextContainer() {
 
         }
         else {
-            localStorage.setItem('isAttemptDone', 'true');
+            localStorage.setItem('isAttemptDone', true);
             console.log(localStorage.getItem('isAttemptDone'));
         }
         // if(localStorage.getItem('isAttemptDone') != null){
