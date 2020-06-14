@@ -19,9 +19,9 @@ function TextContainer() {
             localStorage.setItem('isAttemptDone', true);
             console.log(localStorage.getItem('isAttemptDone'));
         }
-        // if(localStorage.getItem('isAttemptDone') != null){
-        //     localStorage.removeItem('isAttemptDone');
-        // }
+        if(localStorage.getItem('isAttemptDone') != null){
+            localStorage.removeItem('isAttemptDone');
+        }
 
         var errorCount = 0;
         var attemptLeft = 1;
