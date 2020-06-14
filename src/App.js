@@ -1,7 +1,6 @@
 import React from 'react';
 import Main from './Components/MainComponent';
 import ExitPage from './Components/ExitComponent';
-import NoAttempts from './Components/NoAttempts';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import $ from 'jquery';
@@ -68,7 +67,6 @@ function App() {
       <Switch>
         <Route exact path="/blindcode" component={Main} />
         <Route exact path="/blindcode/exit" component={ExitPage} />
-        {/* <Route exact path="/blindcode/no_attempts" component={NoAttempts} /> */}
       </Switch>
     </Router>
   );
