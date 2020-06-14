@@ -5,12 +5,20 @@ import $ from 'jquery';
 function TextContainer() {
 
     $(document).ready(function () {
-        var errorCount = 0;
-        var attemptsAllowed = 1;
 
-        if(attemptsAllowed === 0){
-            window.location.replace("http://localhost:3000/blindcode/exit");
+        if (localStorage.getItem('isAttemptDone') == null) {
+            localStorage.setItem('isAttemptDone', false);
+            console.log(localStorage.getItem('isAttemptDone'));
         }
+        if (localStorage.getItem('isAttemptDone')) {
+            window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
+        }
+        else {
+            localStorage.setItem('isAttemptDone', 'true');
+            console.log(localStorage.getItem('isAttemptDone'));
+        }
+
+        var errorCount = 0;
 
         $('#code-template').bind("contextmenu", function (e) {
             e.preventDefault();
@@ -18,10 +26,9 @@ function TextContainer() {
             alertmsg.innerHTML = "Right Click disabled."
             errorCount += 1;
             console.log(errorCount);
-            if(errorCount === 3){
-                attemptsAllowed -= 1;
+            if (errorCount === 3) {
                 console.log("Function called");
-                window.location.replace("http://localhost:3000/blindcode/exit");
+                window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
             }
         });
         var el = document.getElementById('textarea');
@@ -41,10 +48,9 @@ function TextContainer() {
                 alertmsg.innerHTML = "Function Disabled";
                 errorCount += 1;
                 console.log(errorCount);
-                if(errorCount === 3){
-                    attemptsAllowed -= 1;
+                if (errorCount === 3) {
                     console.log("Function called");
-                    window.location.replace("http://localhost:3000/blindcode/exit");
+                    window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
                 }
             }
         })
@@ -58,7 +64,7 @@ function TextContainer() {
             var strSplit2 = string2.split(" ");
             console.log(strSplit, strSplit2);
             if (string2 !== "") {
-                for (var i = 0; i <= strSplit.length - 1 ; i++) {
+                for (var i = 0; i <= strSplit.length - 1; i++) {
                     var result = strSplit[i].localeCompare(strSplit2[i]);
                     console.log(i);
                     console.log(result);
@@ -79,18 +85,18 @@ function TextContainer() {
                     else {
                         var alertmsg = document.getElementById('alert-msg');
                         alertmsg.innerHTML = "Enter string please";
-                    } 
+                    }
                 }
-                 var totalLetters = strSplit.length;
-                    var percentage = ((totalLetters - mistakeCounter) / 100 ) * 100;
-                    console.log(percentage);
+                var totalLetters = strSplit.length;
+                var percentage = ((totalLetters - mistakeCounter) / 100) * 100;
+                console.log(percentage);
             }
         })
     });
 
     return (
         <div id="code-template">
-            <p className = "note" align = "center">Note: You cannot delete any text, so make sure to type precisely!</p>
+            <p className="note" align="center">Note: You cannot delete any text, so make sure to type precisely!</p>
             <Row className="justify-content-md-center">
                 <Col sm={5}>
                     <div className="container">
