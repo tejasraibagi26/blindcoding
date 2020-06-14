@@ -6,22 +6,22 @@ function TextContainer() {
 
     $(document).ready(function () {
 
-        if (localStorage.getItem('isAttemptDone') == null) {
-            localStorage.setItem('isAttemptDone', false);
-            console.log(localStorage.getItem('isAttemptDone'));
-        }
-        if (localStorage.getItem('isAttemptDone')) {
-            window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
-            // window.location.replace("http://localhost:3000/blindcode/no_attempts");
+        // if (localStorage.getItem('isAttemptDone') == null) {
+        //     localStorage.setItem('isAttemptDone', false);
+        //     console.log(localStorage.getItem('isAttemptDone'));
+        // }
+        // if (localStorage.getItem('isAttemptDone')) {
+        //     window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
+        //     // window.location.replace("http://localhost:3000/blindcode/no_attempts");
 
-        }
-        else {
-            localStorage.setItem('isAttemptDone', true);
-            console.log(localStorage.getItem('isAttemptDone'));
-        }
-        if(localStorage.getItem('isAttemptDone') != null){
-            localStorage.removeItem('isAttemptDone');
-        }
+        // }
+        // else {
+        //     localStorage.setItem('isAttemptDone', true);
+        //     console.log(localStorage.getItem('isAttemptDone'));
+        // }
+        // if(localStorage.getItem('isAttemptDone') != null){
+        //     localStorage.removeItem('isAttemptDone');
+        // }
 
         var errorCount = 0;
         var attemptLeft = 1;
