@@ -35,7 +35,7 @@ function TextContainer() {
             if (errorCount === 3) {
                 attemptLeft -= 1;
                 console.log("Function called");
-                window.location.replace("https://tejasraibagi26.github.io/blindcode/exit")
+                window.location.replace("https://tejasraibagi26.github.io/#/blindcode/exit")
                 // window.location.replace("http://localhost:3000/blindcode/exit");
                 ;
             }
@@ -60,7 +60,7 @@ function TextContainer() {
                 if (errorCount === 3) {
                     attemptLeft -= 1;
                     console.log("Function called");
-                    window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
+                    window.location.replace("https://tejasraibagi26.github.io/#/blindcode/exit");
                     // window.location.replace("http://localhost:3000/blindcode/exit");
 
                 }
