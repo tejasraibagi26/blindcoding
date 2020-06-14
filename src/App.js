@@ -65,8 +65,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Redirect exact path="/blindcode" component={Main} />
-        <Redirect exact path="/blindcode/exit" component={ExitPage} />
+        <Route exact path="/blindcode" component={Main} />
+        <Redirect exact path = "/" to = "/blindcode/exit" component={ExitPage} />
       </Switch>
     </Router>
   );
