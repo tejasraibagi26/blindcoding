@@ -68,7 +68,7 @@ function App() {
       <Switch>
         <Route exact path="/blindcode" component={Main} />
         <Route exact path="/blindcode/exit" component={ExitPage} />
-        <Route exact path="/blindcode/no_attemps" component={NoAttempts} />
+        <Route exact path="/blindcode/no_attempts" component={NoAttempts} />
       </Switch>
     </Router>
   );
