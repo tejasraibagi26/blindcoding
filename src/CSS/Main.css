@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     color: white;
@@ -6,18 +6,17 @@
     width: 100%;
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer */
- -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
--webkit-user-select: none; /* Chrome, Safari, and Opera */
--webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Disable touch highlight color */
 }
 
-body{
-    background-image: linear-gradient(
-        to right,#37ecba,#73afd3
-    );
+body {
+    background-image: linear-gradient( to right, #37ecba, #73afd3);
 }
 
-.navbar-brand{
+.navbar-brand {
     position: relative;
     font-size: 30px !important;
     font-weight: 500;
@@ -27,7 +26,7 @@ body{
     /* text-shadow: 0px 2px 10px grey; */
 }
 
-.container{
+.container {
     margin: 10px 10px;
     background-color: white !important;
     /* width: 40% !important;
@@ -38,31 +37,29 @@ body{
     border-radius: 8px;
 }
 
-.container2{
+.container2 {
     margin-bottom: 20px;
     background-color: white !important;
     width: 100%;
 }
 
-
-.text{
+.text {
     color: black !important;
     font-weight: 300;
     font-size: 18px;
 }
 
-.text-head{
+.text-head {
     font-weight: 500;
     color: black;
 }
 
-.answer-holder{
+.answer-holder {
     padding: 0px 10px;
     border: transparent;
 }
 
-
-.btn{
+.btn {
     /* margin: 20px 15px; */
     margin-bottom: 20px;
     font-weight: 500 !important;
@@ -70,33 +67,31 @@ body{
     font-size: 25px !important;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: transparent !important;
     border-color: white !important;
     outline-width: 20px !important;
 }
 
-.btn-primary:hover , .btn:hover{
+.btn-primary:hover, .btn:hover {
     background-color: white !important;
     color: turquoise !important;
 }
 
-.alerts{
+.alerts {
     color: red !important;
     background-color: transparent !important;
     font-size: 15px;
-    
 }
 
-.footer-container{
+.footer-container {
     background-color: white;
     color: black;
 }
 
-.container-fluid{
+.container-fluid {
     color: black !important;
 }
-
 
 /* .heading-title{
     margin-top: 50px;
