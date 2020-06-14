@@ -64,10 +64,10 @@ function App() {
 
   return (
     <Router>
-      <Redirect>
-        <Route exact path="/blindcode" component={Main} />
-        <Route exact path="/blindcode/exit" component={ExitPage} />
-      </Redirect>
+      <Switch>
+        <Redirect exact path="/blindcode" component={Main} />
+        <Redirect exact path="/blindcode/exit" component={ExitPage} />
+      </Switch>
     </Router>
   );
 
