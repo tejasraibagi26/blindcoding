@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Row, Col } from 'react-bootstrap';
 import $ from 'jquery';
+import { Router } from 'react-router-dom';
 
 function TextContainer() {
 
@@ -35,7 +36,7 @@ function TextContainer() {
             if (errorCount === 3) {
                 attemptLeft -= 1;
                 console.log("Function called");
-                window.location.replace("https://tejasraibagi26.github.io/blindcode/exit")
+                Router.replace("/exit");
                 // window.location.replace("http://localhost:3000/blindcode/exit");
                 ;
             }
@@ -60,7 +61,7 @@ function TextContainer() {
                 if (errorCount === 3) {
                     attemptLeft -= 1;
                     console.log("Function called");
-                    window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
+                    Router.replace("/exit");
                     // window.location.replace("http://localhost:3000/blindcode/exit");
 
                 }
