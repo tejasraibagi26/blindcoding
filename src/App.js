@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from './Components/MainComponent';
 import ExitPage from './Components/ExitComponent';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect ,HashRouter } from 'react-router-dom';
 
 import $ from 'jquery';
 
