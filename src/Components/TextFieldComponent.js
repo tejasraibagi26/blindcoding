@@ -32,13 +32,13 @@ function TextContainer() {
             alertmsg.innerHTML = "Right Click disabled."
             errorCount += 1;
             console.log(errorCount);
-            if (errorCount === 3) {
-                attemptLeft -= 1;
-                console.log("Function called");
-                window.location.replace("https://tejasraibagi26.github.io/blindcode/exit")
-                // window.location.replace("http://localhost:3000/blindcode/exit");
-                ;
-            }
+            // if (errorCount === 3) {
+            //     attemptLeft -= 1;
+            //     console.log("Function called");
+            //     window.location.replace("https://tejasraibagi26.github.io/blindcode/exit")
+            //     // window.location.replace("http://localhost:3000/blindcode/exit");
+            //     ;
+            // }
         });
         var el = document.getElementById('textarea');
         el.addEventListener('keydown', function (event) {
@@ -57,13 +57,13 @@ function TextContainer() {
                 alertmsg.innerHTML = "Function Disabled";
                 errorCount += 1;
                 console.log(errorCount);
-                if (errorCount === 3) {
-                    attemptLeft -= 1;
-                    console.log("Function called");
-                    window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
-                    // window.location.replace("http://localhost:3000/blindcode/exit");
+                // if (errorCount === 3) {
+                //     attemptLeft -= 1;
+                //     console.log("Function called");
+                //     window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
+                //     // window.location.replace("http://localhost:3000/blindcode/exit");
 
-                }
+                // }
             }
         })
 
