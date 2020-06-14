@@ -5,28 +5,50 @@ import $ from 'jquery';
 function TextContainer() {
 
     $(document).ready(function () {
+        var errorCount = 0;
+        var attemptsAllowed = 1;
+
+        if(attemptsAllowed === 0){
+            window.location.replace("http://localhost:3000/blindcode/exit");
+        }
+
         $('#code-template').bind("contextmenu", function (e) {
             e.preventDefault();
             var alertmsg = document.getElementById('alert-msg');
             alertmsg.innerHTML = "Right Click disabled."
+            errorCount += 1;
+            console.log(errorCount);
+            if(errorCount === 3){
+                attemptsAllowed -= 1;
+                console.log("Function called");
+                window.location.replace("http://localhost:3000/blindcode/exit");
+            }
         });
-        // var el = document.getElementById('textarea');
-        // el.addEventListener('keydown', function (event) {
-        //     const key = event.key;
-        //     if (key === "Backspace" || key === "Delete") {
-        //         event.preventDefault();
-        //         var alertmsg = document.getElementById('alert-msg');
-        //         alertmsg.innerHTML = "You cannot delete!."
-        //         // alert('You cannot delete!');
-        //     }
-        // });
+        var el = document.getElementById('textarea');
+        el.addEventListener('keydown', function (event) {
+            const key = event.key;
+            if (key === "Backspace" || key === "Delete") {
+                event.preventDefault();
+                var alertmsg = document.getElementById('alert-msg');
+                alertmsg.innerHTML = "You cannot delete!."
+                // alert('You cannot delete!');
+            }
+        });
         document.body.addEventListener('keydown', event => {
             if (event.ctrlKey && 'cvxspwuazA'.indexOf(event.key) !== -1 || event.ctrlKey && event.shiftKey && 'cjikzeKCJIZE'.indexOf(event.key) !== -1) {
                 event.preventDefault();
                 var alertmsg = document.getElementById('alert-msg');
                 alertmsg.innerHTML = "Function Disabled";
+                errorCount += 1;
+                console.log(errorCount);
+                if(errorCount === 3){
+                    attemptsAllowed -= 1;
+                    console.log("Function called");
+                    window.location.replace("http://localhost:3000/blindcode/exit");
+                }
             }
         })
+
 
         $('#button').click(function () {
             var mistakeCounter = 0;
@@ -68,6 +90,7 @@ function TextContainer() {
 
     return (
         <div id="code-template">
+            <p className = "note" align = "center">Note: You cannot delete any text, so make sure to type precisely!</p>
             <Row className="justify-content-md-center">
                 <Col sm={5}>
                     <div className="container">

@@ -1,5 +1,7 @@
 import React from 'react';
 import Main from './Components/MainComponent';
+import ExitPage from './Components/ExitComponent';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import $ from 'jquery';
 
@@ -55,7 +57,12 @@ function App() {
 
 
   return (
-    <Main />
+    <Router>
+      <Switch>
+        <Route exact path = "/blindcode" component = {Main} />
+        <Route exact path = "/blindcode/exit" component = {ExitPage} />
+      </Switch>
+    </Router>
   );
 
 

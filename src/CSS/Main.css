@@ -4,13 +4,13 @@
     color: white;
     font-family: 'Poppins', sans-serif;
     width: 100%;
-    user-select: none;
+    user-select: none !important;
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer */
     -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
     -webkit-user-select: none; /* Chrome, Safari, and Opera */
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Disable touch highlight color */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* Disable touch highlight color */
 }
 
 body {
@@ -57,7 +57,7 @@ body {
 
 .answer-holder {
     padding: 0px 10px;
-    border: transparent;
+    border:  transparent !important;
 }
 
 .btn {
@@ -83,6 +83,10 @@ body {
     color: red !important;
     background-color: transparent !important;
     font-size: 15px;
+}
+
+.note{
+    color: red;
 }
 
 .footer-container {
