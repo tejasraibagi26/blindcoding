@@ -70,8 +70,8 @@ body {
     font-weight: 500 !important;
     width: 25% !important;
     font-size: 25px !important;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
 }
 
 .btn-primary {
