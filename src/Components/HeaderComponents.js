@@ -6,7 +6,7 @@ function Header() {
     return (
         <div className = "container2">
             <Navbar id="nav-disable" expand="lg">
-                <NavbarBrand className="nav-title">Blind Typing v1.05</NavbarBrand>
+                <NavbarBrand className="nav-title">Blind Typing v2</NavbarBrand>
             </Navbar>
         </div>
     );

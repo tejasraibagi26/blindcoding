@@ -6,25 +6,9 @@ function TextContainer() {
 
     $(document).ready(function () {
 
-        // if (localStorage.getItem('isAttemptDone') == null) {
-        //     localStorage.setItem('isAttemptDone', false);
-        //     console.log(localStorage.getItem('isAttemptDone'));
-        // }
-        // if (localStorage.getItem('isAttemptDone')) {
-        //     window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
-        //     // window.location.replace("http://localhost:3000/blindcode/no_attempts");
-
-        // }
-        // else {
-        //     localStorage.setItem('isAttemptDone', true);
-        //     console.log(localStorage.getItem('isAttemptDone'));
-        // }
-        // if(localStorage.getItem('isAttemptDone') != null){
-        //     localStorage.removeItem('isAttemptDone');
-        // }
-
         var errorCount = 0;
         var attemptLeft = 1;
+        var mistakeCounter = 0;
 
         $('#code-template').bind("contextmenu", function (e) {
             e.preventDefault();
@@ -35,9 +19,7 @@ function TextContainer() {
             if (errorCount === 3) {
                 attemptLeft -= 1;
                 console.log("Function called");
-                window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
-                // window.location.replace("http://localhost:3000/blindcode/exit");
-                ;
+                // window.location.replace("/exit");
             }
         });
         var el = document.getElementById('textarea');
@@ -56,23 +38,16 @@ function TextContainer() {
                 var alertmsg = document.getElementById('alert-msg');
                 alertmsg.innerHTML = "Function Disabled";
                 errorCount += 1;
+                mistakeCounter += 1;
                 console.log(errorCount);
                 if (errorCount === 3) {
                     attemptLeft -= 1;
                     console.log("Function called");
-                    window.location.replace("https://tejasraibagi26.github.io/blindcode/exit");
-                    // window.location.replace("http://localhost:3000/blindcode/exit");
-
                 }
             }
         })
 
-        // if(attemptLeft == 0){
-        //     window.location.replace("https://tejasraibagi26.github.io/blindcode/no_attempts");
-        // }
-
         $('#button').click(function () {
-            var mistakeCounter = 0;
             attemptLeft -= 1;
             var string1 = $('#text').text();
             var string2 = $('#textarea').val();
@@ -87,8 +62,8 @@ function TextContainer() {
                     if (result !== null) {
                         if (result === -1) {
                             var alertmsg = document.getElementById('alert-msg');
-                            alertmsg.innerHTML = "Total Mistakes " + mistakeCounter;
                             mistakeCounter += 1;
+                            alertmsg.innerHTML = "Total Mistakes " + mistakeCounter;
                             console.log("Total Mistakes " + mistakeCounter);
                         }
                         else {
@@ -96,29 +71,32 @@ function TextContainer() {
                             alertmsg.innerHTML = "Strings Matched";
                             console.log("Total Mistakes " + mistakeCounter);
                             alertmsg.innerHTML = "Total Mistakes " + mistakeCounter;
+                            console.log(mistakeCounter);
                         }
                     }
                     else {
                         var alertmsg = document.getElementById('alert-msg');
                         alertmsg.innerHTML = "Enter string please";
                     }
+                    if (mistakeCounter < 3) {
+                        //Redirect to form
+                    }
                 }
-                var totalLetters = strSplit.length;
-                var percentage = ((totalLetters - mistakeCounter) / 100) * 100;
-                console.log(percentage);
             }
         })
     });
 
     return (
         <div id="code-template">
-            <p className="note" align="center">Note: You cannot delete any text, so make sure to type precisely!</p>
+            <p className="note" align="center">Note: You cannot delete any text, so make sure to type precisely!
+            <br></br>Messing with the website will increase your mistake count.<br></br> Score less than 5 mistakes to win! You will be automatically redirected.
+            </p>
             <Row className="justify-content-md-center">
                 <Col sm={5}>
                     <div className="container">
                         <div className="header">
                             <h2 className="text-head"> Paragraph to copy </h2>
-                            <p name="quest" className="text" id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p name="quest" className="text" id="text">Lorem Ipsum</p>
                         </div>
                     </div>
                 </Col>

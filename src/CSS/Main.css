@@ -13,6 +13,10 @@
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* Disable touch highlight color */
 }
 
+#main{
+    height: 100vh !important;
+}
+
 body {
     background-image: linear-gradient( to right, #37ecba, #73afd3);
 }
@@ -66,6 +70,8 @@ body {
     font-weight: 500 !important;
     width: 25% !important;
     font-size: 25px !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .btn-primary {
@@ -73,6 +79,7 @@ body {
     border-color: white !important;
     outline-width: 20px !important;
 }
+
 
 .btn-primary:hover, .btn:hover {
     background-color: white !important;
@@ -87,6 +94,7 @@ body {
 
 .note{
     color: red;
+    font-weight: 500;
 }
 
 .footer-container {

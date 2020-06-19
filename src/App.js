@@ -69,7 +69,7 @@ function App() {
         <Route exact path = "/blindcode/exit" component = {ExitPage} />
       </Switch>
     </Router>
-  );
+  );   
 
 
 }

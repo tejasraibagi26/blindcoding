@@ -7,11 +7,13 @@ class Main extends React.Component {
 
     render() {
         return (
-            <main>
-                <Header />
-                <TextContainer />
-                <FooterComp />
-            </main>
+            <section id="main">
+                <main>
+                    <Header />
+                    <TextContainer />
+                    <FooterComp />
+                </main>
+            </section>
         );
     }
 }
