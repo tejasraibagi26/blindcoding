@@ -78,8 +78,8 @@ function TextContainer() {
                         var alertmsg = document.getElementById('alert-msg');
                         alertmsg.innerHTML = "Enter string please";
                     }
-                    if (mistakeCounter < 3) {
-                        //Redirect to form
+                    if (mistakeCounter < 5) {
+                        window.location.replace("https://airtable.com/shrwv95wKX8Yicec2");
                     }
                 }
             }
