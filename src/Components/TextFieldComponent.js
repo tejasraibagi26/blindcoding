@@ -81,40 +81,47 @@ function TextContainer() {
                     if (mistakeCounter < 5) {
                         window.location.replace("https://airtable.com/shrwv95wKX8Yicec2");
                     }
+                    else{
+                        window.location.reload();
+                    }
                 }
             }
         })
     });
 
+    const para = "I tend, as a reader, to prize and admire clarity, precision, plainness, lucidity, and the sort of magical compression that enriches instead of vitiates. Someone's ability to write this way, especially in nonfiction, fills me with envy, and awe. That might help explain why a fair number of Best American Essay pieces tend to be short, terse, and informal in usage/syntax. Readers who enjoy noodling about genre might welcome the news that several of this year's Best Essays are arguably more like causeries or propos than like essays per se, although one could counterargue that these pieces tend, in their essential pithiness, to be closer to what's historically been meant by 'essay.'"
+
     return (
-        <div id="code-template">
-            <p className="note" align="center">Note: You cannot delete any text, so make sure to type precisely!
+        <section id="text-field">
+            <div id="code-template">
+                <p className="note" align="center">Note: You cannot delete any text, so make sure to type precisely!
             <br></br>Messing with the website will increase your mistake count.<br></br> Score less than 5 mistakes to win! You will be automatically redirected.
             </p>
-            <Row className="justify-content-md-center">
-                <Col sm={5}>
-                    <div className="container">
-                        <div className="header">
-                            <h2 className="text-head"> Paragraph to copy </h2>
-                            <p name="quest" className="text" id="text">Lorem Ipsum</p>
+                <Row className="justify-content-md-center">
+                    <Col sm={5}>
+                        <div className="container">
+                            <div className="header">
+                                <h2 className="text-head"> Paragraph to copy </h2>
+                                <p name="quest" className="text" id="text">{para}</p>
+                            </div>
                         </div>
-                    </div>
-                </Col>
-                <Col md={5}>
-                    <div className="container">
-                        <div className="header">
-                            <h2 className="text-head"> Write here (Hidden) </h2>
-                            <textarea name="answer" id="textarea" className="answer-holder" rows='13' cols='33' placeholder="Answer"></textarea>
+                    </Col>
+                    <Col md={5}>
+                        <div className="container">
+                            <div className="header">
+                                <h2 className="text-head"> Write here (Hidden) </h2>
+                                <textarea name="answer" id="textarea" className="answer-holder" rows='13' cols='33' placeholder="Answer"></textarea>
+                            </div>
                         </div>
-                    </div>
-                </Col>
+                    </Col>
 
-            </Row>
-            <div className="row justify-content-center">
-                <h4 id="alert-msg" className="row justify-content-center alerts"></h4>
-                <Button id="button">SUBMIT</Button>
+                </Row>
+                <div className="row justify-content-center">
+                    <h4 id="alert-msg" className="row justify-content-center alerts"></h4>
+                    <Button id="button">SUBMIT</Button>
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
 
